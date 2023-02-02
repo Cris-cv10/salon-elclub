@@ -1,0 +1,482 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: black;
+}
+
+/*-----HEADER-----*/
+header .logo-inicial{
+    width: 50%;
+    height: 50%;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.container-fluid{
+    background: rgb(89,89,89);
+    background: linear-gradient(90deg, rgba(89,89,89,1) 12%, rgba(37,37,37,1) 50%, rgba(89,89,89,1) 89%);}
+
+header{
+    background-color:black;
+    width: 100%;
+    height: 150px;
+    border: 1px solid gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 4px ;
+    margin: 25px;
+    justify-content: space-around;
+}
+.hero div{
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    background-image: url("../img/fondo1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero div h1{
+    display: inline-block;
+    width: 25%;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(32, 29, 29, 0.623);
+    padding: 10px;
+}
+.hero div p{
+    display: inline-block;
+    width: 50%;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(32, 29, 29, 0.623);
+    padding: 10px;
+}
+
+
+
+/*-----MAIN-----*/
+main{
+    background-color: rgb(70, 65, 65);
+}
+
+.salones h2{
+    font-size: 30px;
+    color: white;
+    background-color: black;
+}
+.salones .salones-contenedor{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.salones .salones-contenedor div{
+    border: 2px solid black;
+    width: 275px;
+    height: 350px;
+    margin: 25px;
+    text-align: center;
+    display: inline-block;
+    background-color: aliceblue;
+    transition-property: width heigth;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+.salones .salones-contenedor div img{
+    width: 240px;
+    height: 260px;
+    border: 2px solid grey;
+}
+.salones div a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    background-color: black;
+    padding: 4px 5px;
+}
+
+.salones .salones-contenedor div:hover{
+    width: 282px;
+    height: 365px;
+}
+
+
+
+.contenido{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.contenido img{
+    width: 55%;
+}
+.contenido p{
+    border: 1.5px solid grey;
+    margin: 10px;
+    padding: 10px;
+}
+
+.intro{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.intro h1{
+    font-size: 50px;
+    color: whitesmoke;
+    background-color: black;
+    animation-name: portada;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: initial;
+}
+@keyframes portada{
+    from{
+        margin: 100%;
+        width: 200%;
+    }
+    to{
+        margin: 0%;
+        width: 100%;
+    }
+}
+.intro img{
+    width: 500px;
+    height: 80vh;
+    border: 2.5px solid black;
+    transition-property: width heigth;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+.intro img:hover{
+    width: 540px;
+    height: 85vh;
+}
+.intro div h2{
+    font-size: 35px;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+.intro div p{
+    display: inline-block;
+    width: 70%;
+    height: 50%;
+    text-align: center;
+    border: solid 2px white
+}
+
+.ntro-salon h2{
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+.foto-salon{
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-auto-rows: 400px;
+    gap: 15px;
+}
+
+.ntro-salon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid grey;
+    box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+}
+
+
+.trabajos h2{
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+
+.grid-galeria{
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-auto-rows: 400px;
+    gap: 15px;
+}
+.grid-galeria div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+}
+.grid-item{
+    transition: 1.5s;
+}
+.grid-item:hover{
+    transform: scale(1.08);
+}
+.ubicacion h3{
+    color: white;
+    background-color: black;
+    padding: 5px
+}
+
+.ubicacion iframe{
+    margin-left: 30px;
+    border: 5px solid black;
+    transition: 1.5s;
+}
+.ubicacion iframe:hover{
+    transform: scale(1.08);
+}
+.contacto{
+    padding: 50px;
+}
+.contacto h1{
+    font-size: 40px;
+    padding: 20px;
+}
+.contacto form .datos{
+    padding: 10px;
+}
+.contacto form .genero{
+    padding: 10px;
+}
+.contacto form .casilla h3{
+    font-size: 20px;
+    padding: 10px;
+}
+.contacto form .casilla textarea{
+    width: 310px;
+    height: 250px;
+}
+
+.iframe{
+    width: 600px;
+    height: 400px;
+}
+
+/*-----FOOTER-----*/
+footer{
+    width: 100%;
+    height: 130px;
+    background: rgb(89,89,89);
+    background: linear-gradient(90deg, rgba(89,89,89,1) 12%, rgba(37,37,37,1) 50%, rgba(89,89,89,1) 89%);display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    flex-wrap: wrap
+}
+
+footer nav ul{
+    list-style: none;
+}
+footer nav ul li a{
+    text-decoration:none;
+    color: black;
+    margin: 15px;
+}
+
+footer div img {
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+}
+.logos{
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    gap: 5px;
+}
+.lg-club{
+    grid-column: span 2;
+}
+
+/*!--------MEDIA QUERY--------*/
+@media screen and (max-width:990px) {
+    header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header .logo-inicial{
+        width: 31%;
+        height: 50%;
+    }
+    .intro h1{
+        font-size: 45px;
+    }
+    .intro div h2{
+        font-size: 30px;
+    }
+    .ntro-salon h2{
+        font-size: 25px;
+    }
+    .trabajos h2{
+        font-size: 20px;
+    }
+    .ubicacion h3{
+        font-size: 18px;
+    }
+    .intro img{
+        width: 400px;
+        height: 80vh;
+        border: 2.5px solid black;
+    }
+    .foto-salon{
+        grid-template-columns: 23% 23% ;
+        grid-auto-rows: 250px;
+    }
+    .grid-galeria{
+        grid-template-columns: 30% 30%;
+        grid-auto-rows: 250px;
+    }
+    .iframe{
+        width: 500px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .intro h1{
+        font-size: 40px;
+    }
+    .intro div h2{
+        font-size: 25px;
+    }
+    .ntro-salon h2{
+        font-size: 20px;
+    }
+    .trabajos h2{
+        font-size: 18px;
+    }
+    .ubicacion h3{
+        font-size: 15px;
+    }
+    .contenido{
+        flex-direction: column;
+    }
+    .contenido img{
+        width: 80%;
+    }
+    .hero div h1{
+        font-size: 20px;
+
+    }
+    .hero div p{
+    font-size: 15px;
+    }
+    footer nav ul li a{
+        font-size: 15px;
+    }
+    .logos{
+        width: 75px;
+        height: 75px;
+    }
+    .foto-salon{
+        grid-template-columns: 50% ;
+        grid-auto-rows: 275px;
+    }
+    .grid-galeria{
+        grid-template-columns: 50%;
+        grid-auto-rows: 275px;
+    }
+    .iframe{
+        width: 430px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .intro h1{
+        font-size: 37px;
+    }
+    .intro div h2{
+        font-size: 22px;
+    }
+    .ntro-salon h2{
+        font-size: 17px;
+    }
+    .trabajos h2{
+        font-size: 15px;
+    }
+    .ubicacion h3{
+        font-size: 13px;
+    }
+    .intro img{
+        width: 250px;
+        height: 80vh;
+        border: 2.5px solid black;
+    }
+    .foto-salon{
+        grid-template-columns: 50% ;
+        grid-auto-rows: 225px;
+    }
+    .grid-galeria{
+        grid-template-columns: 50%;
+        grid-auto-rows: 225px;
+    }
+    .hero div h1{
+        font-size: 18px;
+    }
+    .hero div p{
+    font-size: 13px;
+    }
+    footer nav ul li a{
+        font-size: 12px;
+    }
+    .logos{
+        width: 50px;
+        height: 50px;
+    }
+    .iframe{
+        width: 350px;
+        height: 250px;
+    }
+}
