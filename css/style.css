@@ -59,6 +59,12 @@ header nav ul li a{
     margin: 25px;
     justify-content: space-around;
 }
+
+
+/*-----MAIN-----*/
+main{
+    background-color: rgb(70, 65, 65);
+}
 .hero div{
     text-align: center;
     width: 100%;
@@ -90,12 +96,6 @@ header nav ul li a{
     padding: 10px;
 }
 
-
-
-/*-----MAIN-----*/
-main{
-    background-color: rgb(70, 65, 65);
-}
 
 .salones h2{
     font-size: 30px;
@@ -136,8 +136,6 @@ main{
     width: 282px;
     height: 365px;
 }
-
-
 
 .contenido{
     display: flex;

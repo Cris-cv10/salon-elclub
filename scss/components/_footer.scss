@@ -1,0 +1,41 @@
+footer{
+    width: 100%;
+    height: 130px;
+    background: rgb(89,89,89);
+    background: linear-gradient(90deg, rgba(89,89,89,1) 12%, rgba(37,37,37,1) 50%, rgba(89,89,89,1) 89%);display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    flex-wrap: wrap;
+    nav{
+        ul{
+            list-style: none;
+            li{
+                a{
+                text-decoration:none;
+                color: black;
+                margin: 15px;
+                }
+            }
+
+        }
+    .logos{
+        width: 100px;
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 50px;
+        gap: 5px;
+        div{
+            img{
+                width: 100%;
+                height: 100%;
+                margin-top: 5px;
+            }
+        }
+        .lg-club{
+            grid-column: span 2;
+        }
+
+    }
+    }
+}

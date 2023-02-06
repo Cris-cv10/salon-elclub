@@ -1,0 +1,240 @@
+/*-----index-----*/
+main{
+    background-color: rgb(70, 65, 65);
+    .hero{
+        div{
+            text-align: center;
+            width: 100%;
+            height: 80vh;
+            background-image: url("../img/fondo1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        h1{
+            display: inline-block;
+            width: 25%;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(32, 29, 29, 0.623);
+            padding: 10px; 
+        }
+        p{
+            display: inline-block;
+            width: 50%;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(32, 29, 29, 0.623);
+            padding: 10px;
+        }
+        }
+    }
+    .salones{
+        h2{
+            font-size: 30px;
+            color: white;
+            background-color: black;
+        }
+        .salon-contenedor{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            div{
+                border: 2px solid black;
+                width: 275px;
+                height: 350px;
+                margin: 25px;
+                text-align: center;
+                display: inline-block;
+                background-color: aliceblue;
+                transition-property: width heigth;
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;
+                img{
+                    width: 240px;
+                    height: 260px;
+                    border: 2px solid grey;
+                }
+                a{
+                    text-decoration: none;
+                    color:white;
+                    font-weight: bold;
+                    background-color: black;
+                    padding: 4px 5px;
+                }
+                &:hover{
+                    width: 282px;
+                    height: 365px;
+                }
+            }
+        }
+    }
+    .contenido{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        p{
+            border: 1.5px solid grey;
+            margin: 10px;
+            padding: 10px;
+        }
+        img{
+            width: 55%;
+        }
+    }
+}
+/*-----salones-----*/
+.intro{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        font-size: 50px;
+        color: whitesmoke;
+        background-color: black;
+        animation-name: portada;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-direction: initial;
+    }
+    img{
+        width: 500px;
+        height: 80vh;
+        border: 2.5px solid black;
+        transition-property: width heigth;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        &:hover{
+            width: 540px;
+            height: 85vh;
+        }
+    }
+    div{
+        h2{
+            font-size: 35px;
+            color: white;
+            background-color: black;
+            padding: 5px;
+        }
+        p{
+            display: inline-block;
+            width: 70%;
+            height: 50%;
+            text-align: center;
+            border: solid 2px white
+        }
+    }
+}
+.ntro-salon{
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-auto-rows: 400px;
+    gap: 15px;
+    h2{
+        font-size: 30px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+    }
+    .foto-salon{
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        grid-auto-rows: 400px;
+        gap: 15px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid grey;
+            box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+        }
+    }
+}
+.trabajos{
+    h2{
+        font-size: 25px;
+        color: white;
+        background-color: black;
+        padding: 5px;
+    }
+    .grid-galeria{
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-auto-rows: 400px;
+        gap: 15px;
+        .grid-item{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+                -moz-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
+            }
+            transition: 1.5s;
+            &:hover{
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+.ubicacion{
+    h3{
+        color: white;
+        background-color: black;
+        padding: 5px
+    }
+    iframe{
+        margin-left: 30px;
+        border: 5px solid black;
+        transition: 1.5s;
+        &:hover{
+            transform: scale(1.08);
+        }
+        .frame{
+            width: 600px;
+            height: 400px;
+        }
+    }
+}
+/*-----contacto-----*/
+.contacto{
+    padding: 50px;
+    h1{
+        font-size: 40px;
+        padding: 20px;
+    }
+    form{
+        .datos{
+            padding: 10px;
+        }
+        .genero{
+            padding: 10px;
+        }
+        .casilla{
+            h3{
+                font-size: 20px;
+                padding: 10px;
+            }
+            textarea{
+                width: 310px;
+                height: 250px;
+            }
+        }
+    }
+}
