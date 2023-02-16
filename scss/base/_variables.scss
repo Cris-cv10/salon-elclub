@@ -1,0 +1,32 @@
+//* Listas
+$colores:
+rgb(70, 65, 65),
+rgba(32, 29, 29, 0.623),
+white,
+black,
+grey;
+
+$font-size:
+20px,
+25px,
+30px,
+35px,
+40px,
+50px;
+
+//* Extend
+
+%flex{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+//* Mixin
+
+@mixin flex ($flx, $justif){
+    display: $flx;
+    justify-content: $justif;
+}
+
+

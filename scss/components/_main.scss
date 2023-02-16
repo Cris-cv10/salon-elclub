@@ -1,6 +1,6 @@
 /*-----index-----*/
 main{
-    background-color: rgb(70, 65, 65);
+    background-color: nth($colores, 1);
     .hero{
         div{
             text-align: center;
@@ -11,40 +11,38 @@ main{
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            display: flex;
+            @include flex (flex, center);
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         h1{
             display: inline-block;
             width: 25%;
             text-decoration: none;
-            color: white;
-            background-color: rgba(32, 29, 29, 0.623);
+            color: nth($colores, 3);
+            background-color: nth($colores, 2);
             padding: 10px; 
         }
         p{
             display: inline-block;
             width: 50%;
             text-decoration: none;
-            color: white;
-            background-color: rgba(32, 29, 29, 0.623);
+            color: nth($colores, 3);
+            background-color: nth($colores, 2);
             padding: 10px;
         }
         }
     }
     .salones{
         h2{
-            font-size: 30px;
-            color: white;
-            background-color: black;
+            font-size: nth($font-size, 3);
+            color: nth($colores, 3);
+            background-color: nth($colores, 4);
         }
-        .salon-contenedor{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        .salones-contenedor{
+            @include flex (flex, space-around);
+            flex-wrap: wrap;            
             div{
-                border: 2px solid black;
+                border: 2px solid nth($colores, 4);
                 width: 275px;
                 height: 350px;
                 margin: 25px;
@@ -57,13 +55,13 @@ main{
                 img{
                     width: 240px;
                     height: 260px;
-                    border: 2px solid grey;
+                    border: 2px solid nth($colores, 5);
                 }
                 a{
                     text-decoration: none;
-                    color:white;
+                    color:nth($colores, 3);
                     font-weight: bold;
-                    background-color: black;
+                    background-color: nth($colores, 4);
                     padding: 4px 5px;
                 }
                 &:hover{
@@ -74,13 +72,11 @@ main{
         }
     }
     .contenido{
-        display: flex;
-        text-align: center;
-        align-items: center;
+        @extend %flex;
         justify-content: center;
         margin-top: 30px;
         p{
-            border: 1.5px solid grey;
+            border: 1.5px solid nth($colores, 5);
             margin: 10px;
             padding: 10px;
         }
@@ -91,63 +87,63 @@ main{
 }
 /*-----salones-----*/
 .intro{
-    display: flex;
-    text-align: center;
-    align-items: center;
+    @keyframes portada{
+        from{
+            margin: 100%;
+            width: 200%;
+        }
+        to{
+            margin: 0%;
+            width: 100%;
+        }
+    }
+    @extend %flex;
     flex-direction: column;
     h1{
-        font-size: 50px;
+        font-size: nth($font-size, 6);
         color: whitesmoke;
-        background-color: black;
+        background-color: nth($colores, 4);
         animation-name: portada;
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-timing-function: ease-in-out;
         animation-direction: initial;
     }
     img{
         width: 500px;
         height: 80vh;
-        border: 2.5px solid black;
+        border: 2.5px solid nth($colores, 4);
         transition-property: width heigth;
-        transition-duration: 1s;
+        transition-duration: 2s;
         transition-timing-function: ease-in-out;
-        &:hover{
-            width: 540px;
-            height: 85vh;
-        }
     }
     div{
         h2{
-            font-size: 35px;
-            color: white;
-            background-color: black;
+            font-size: nth($font-size, 4);
+            color: nth($colores, 3);
+            background-color: nth($colores, 4);
             padding: 5px;
         }
         p{
+            font-size: nth($font-size, 1);
             display: inline-block;
             width: 70%;
             height: 50%;
             text-align: center;
-            border: solid 2px white
+            border: solid 2px nth($colores, 3)
         }
     }
 }
 .ntro-salon{
-    display: flex;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 23% 23% 23% 23%;
-    grid-auto-rows: 400px;
-    gap: 15px;
+    flex-direction: column;
+    @include flex (flex, center);
     h2{
-        font-size: 30px;
-        color: white;
-        background-color: black;
+        font-size: nth($font-size, 3);
+        color: nth($colores, 3);
+        background-color: nth($colores, 4);
         padding: 5px;
     }
     .foto-salon{
-        display: flex;
-        justify-content: center;
+        @include flex (flex, center);
         display: grid;
         grid-template-columns: 23% 23% 23% 23%;
         grid-auto-rows: 400px;
@@ -156,7 +152,7 @@ main{
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border: 2px solid grey;
+            border: 2px solid nth($colores, 5);
             box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
             -webkit-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
             -moz-box-shadow: 10px 4px 29px -7px rgba(0,0,0,0.75);
@@ -165,14 +161,13 @@ main{
 }
 .trabajos{
     h2{
-        font-size: 25px;
-        color: white;
-        background-color: black;
+        font-size: nth($font-size, 2);
+        color: nth($colores, 3);
+        background-color: nth($colores, 4);
         padding: 5px;
     }
     .grid-galeria{
-        display: flex;
-        justify-content: center;
+        @include flex (flex, center);
         display: grid;
         grid-template-columns: 30% 30% 30%;
         grid-auto-rows: 400px;
@@ -195,13 +190,13 @@ main{
 }
 .ubicacion{
     h3{
-        color: white;
-        background-color: black;
+        color: nth($colores, 3);
+        background-color: nth($colores, 4);
         padding: 5px
     }
     iframe{
         margin-left: 30px;
-        border: 5px solid black;
+        border: 5px solid nth($colores, 4);
         transition: 1.5s;
         &:hover{
             transform: scale(1.08);
@@ -216,7 +211,7 @@ main{
 .contacto{
     padding: 50px;
     h1{
-        font-size: 40px;
+        font-size: nth($font-size, 5);
         padding: 20px;
     }
     form{
@@ -228,7 +223,7 @@ main{
         }
         .casilla{
             h3{
-                font-size: 20px;
+                font-size: nth($font-size, 1);
                 padding: 10px;
             }
             textarea{

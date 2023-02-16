@@ -245,7 +245,7 @@ main{
     grid-auto-rows: 400px;
     gap: 15px;
 }
-.grid-galeria div img{
+.grid-galeria .grid-item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -408,7 +408,7 @@ footer div img {
 
     }
     .hero div p{
-    font-size: 15px;
+        font-size: 15px;
     }
     footer nav ul li a{
         font-size: 15px;
